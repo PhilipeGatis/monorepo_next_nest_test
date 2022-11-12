@@ -4,7 +4,7 @@
   "private": true,
   "workspaces": ["app", "api"],
   "scripts": {
-    "dev": "yarn workspace api start & yarn workspace app dev"
+    "dev": "yarn workspace api start:dev & yarn workspace app dev"
   },
   "devDependencies": {
     "eslint": "8.17.0",

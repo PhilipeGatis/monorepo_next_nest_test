@@ -5,11 +5,11 @@ import { ProductType } from '../../models/product/entities/productType.entity'
 const convertLineToProduct = (line: string): Product => {
   const product = new Product()
 
-  const typeId = line.substring(0, 1)
-  const date = line.substring(1, 26)
-  const description = line.substring(26, 56)
-  const value = line.substring(56, 66)
-  const seller = line.substring(66, 86)
+  const typeId = line.substring(0, 1).trim()
+  const date = line.substring(1, 26).trim()
+  const description = line.substring(26, 56).trim()
+  const value = line.substring(56, 66).trim()
+  const seller = line.substring(66, 86).trim()
 
   const productType = new ProductType()
   productType.id = parseInt(typeId)

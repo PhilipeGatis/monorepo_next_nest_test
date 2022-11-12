@@ -12,14 +12,6 @@ export class FilesImportService {
     private fileImportsRepository: Repository<FileImport>,
   ) {}
 
-  findAll(): Promise<FileImport[]> {
-    return this.fileImportsRepository.find()
-  }
-
-  findOne(id: number): Promise<FileImport> {
-    return this.fileImportsRepository.findOneBy({ id })
-  }
-
   async create(file: Express.Multer.File): Promise<void> {
     const newFileImport = this.fileImportsRepository.create()
 

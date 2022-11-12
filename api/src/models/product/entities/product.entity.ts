@@ -19,7 +19,7 @@ export class Product {
   @Column()
   seller: string
 
-  @ManyToOne(() => ProductType, type => type.id)
+  @ManyToOne(() => ProductType, type => type.id, { eager: true })
   type: ProductType
 
   @ManyToOne(() => FileImport, fileImport => fileImport.id, { cascade: true })

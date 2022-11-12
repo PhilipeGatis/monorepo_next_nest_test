@@ -9,18 +9,6 @@ import { ApiConsumes, ApiTags, ApiBody } from '@nestjs/swagger'
 export class FilesImportController {
   constructor(private readonly filesImportService: FilesImportService) {}
 
-  @Get()
-  async getMany() {
-    const data = await this.filesImportService.findAll()
-    return { data }
-  }
-
-  @Get(':id')
-  async getById(@Param('id', ParseIntPipe) id: number) {
-    const data = await this.filesImportService.findOne(id)
-    return { data }
-  }
-
   @Post()
   @ApiConsumes('multipart/form-data')
   @ApiBody({
