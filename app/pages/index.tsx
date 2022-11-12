@@ -1,5 +1,13 @@
+import { ReactElement } from 'react'
+import Box from '@mui/material/Box'
+import Layout from '../components/template/Layout'
+
 function HomePage() {
-  return <div>Welcome to Next.js!</div>;
+  return <Box>Welcome to Next.js!</Box>
 }
 
-export default HomePage;
+HomePage.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>
+}
+
+export default HomePage
