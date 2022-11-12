@@ -16,7 +16,7 @@ export const typeormModuleOptions: TypeOrmModuleOptions = {
   ...commonDbOptions,
   autoLoadEntities: true,
   migrationsRun: true,
-  migrations: [join(__dirname, './migration/**/*{.ts,.js}')],
+  migrations: [join(__dirname, './migration/**/*{.ts,.js}'), join(__dirname, './seed/**/*{.ts,.js}')],
   synchronize: false,
   logging: true,
   logger: 'file',
