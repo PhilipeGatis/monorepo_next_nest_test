@@ -7,8 +7,8 @@ export class Product {
   @PrimaryGeneratedColumn()
   id: number
 
-  @Column()
-  date: string
+  @Column({ type: 'timestamp' })
+  date: Date
 
   @Column()
   description: string
@@ -19,12 +19,9 @@ export class Product {
   @Column()
   seller: string
 
-  @Column({ default: true })
-  signal: boolean
-
   @ManyToOne(() => ProductType, type => type.id)
   type: ProductType
 
-  @ManyToOne(() => FileImport, fileImport => fileImport.id)
+  @ManyToOne(() => FileImport, fileImport => fileImport.id, { cascade: true })
   fileImport: FileImport
 }

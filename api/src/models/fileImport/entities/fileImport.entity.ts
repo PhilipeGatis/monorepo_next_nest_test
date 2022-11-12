@@ -9,6 +9,6 @@ export class FileImport {
   @CreateDateColumn({ name: 'upload_at', type: 'timestamp' })
   uploadAt: Date
 
-  @OneToMany(() => Product, product => product.id)
+  @OneToMany(() => Product, product => product.id, { cascade: true })
   products: Product[]
 }
