@@ -7,7 +7,7 @@ import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
 import { ProductListGroupedByDescriptionResponseDto } from '@hubla/api/dist/models/product/dto/ProductListGroupedByDescriptionResponse.dto'
-import CollapsibleRow from '../atoms/CollapsibleRow'
+import CollapsibleRow from '../molecules/CollapsibleRow'
 
 const DataGrid: React.FC<{ data: ProductListGroupedByDescriptionResponseDto[] }> = ({ data }) => {
   return (
