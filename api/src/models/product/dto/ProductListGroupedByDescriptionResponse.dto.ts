@@ -1,7 +1,7 @@
 import { ProductResponseDto } from './ProductResponse.dto'
-import { ApiProperty, getSchemaPath } from '@nestjs/swagger'
+import { ApiProperty } from '@nestjs/swagger'
 
-export default class ProductListGroupedByDescriptionResponseDto {
+export class ProductListGroupedByDescriptionResponseDto {
   @ApiProperty()
   title: string
 

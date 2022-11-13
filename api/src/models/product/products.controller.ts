@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common'
 import { ProductsService } from './products.service'
-import ProductListGroupedByDescriptionResponse from './dto/ProductListGroupedByDescriptionResponse.dto'
+import { ProductListGroupedByDescriptionResponseDto } from './dto/ProductListGroupedByDescriptionResponse.dto'
 import { ApiTags, ApiOkResponse } from '@nestjs/swagger'
 
 @ApiTags('products')
@@ -10,16 +10,16 @@ export class ProductsController {
 
   @Get()
   @ApiOkResponse({
-    type: ProductListGroupedByDescriptionResponse,
+    type: ProductListGroupedByDescriptionResponseDto,
     isArray: true,
   })
-  async getMany(): Promise<ProductListGroupedByDescriptionResponse[]> {
+  async getMany(): Promise<ProductListGroupedByDescriptionResponseDto[]> {
     const result = []
     const descriptions = await this.productsService.findAllProductsGroupedByDescription()
 
     for (const description of descriptions) {
       const data = await this.productsService.findAllByDescription(description)
-      const dtoValue = new ProductListGroupedByDescriptionResponse()
+      const dtoValue = new ProductListGroupedByDescriptionResponseDto()
       dtoValue.title = description
       dtoValue.list = data
       result.push(dtoValue)
