@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useState } from 'react'
 import TableRow from '@mui/material/TableRow'
 import TableCell from '@mui/material/TableCell'
 import IconButton from '@mui/material/IconButton'
@@ -31,10 +31,10 @@ const calcTotal = (list: ProductResponseDto[]): string => {
 }
 
 const CollapsibleRow: React.FC<{ row: ProductListGroupedByDescriptionResponseDto }> = ({ row }) => {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = useState(false)
 
   return (
-    <React.Fragment>
+    <>
       <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
         <TableCell>
           <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
@@ -94,7 +94,7 @@ const CollapsibleRow: React.FC<{ row: ProductListGroupedByDescriptionResponseDto
           </Collapse>
         </TableCell>
       </TableRow>
-    </React.Fragment>
+    </>
   )
 }
 

@@ -30,7 +30,7 @@ export class FilesImportController {
     @UploadedFile(
       new ParseFilePipeBuilder()
         .addFileTypeValidator({
-          fileType: 'txt',
+          fileType: 'text/plain',
         })
         .build({
           errorHttpStatusCode: HttpStatus.UNPROCESSABLE_ENTITY,
