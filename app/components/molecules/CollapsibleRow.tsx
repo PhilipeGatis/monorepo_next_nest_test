@@ -10,8 +10,8 @@ import Table from '@mui/material/Table'
 import TableHead from '@mui/material/TableHead'
 import TableBody from '@mui/material/TableBody'
 import { parseJSON, format } from 'date-fns'
-import { ProductListGroupedByDescriptionResponseDto } from '@hubla/api/dist/models/product/dto/ProductListGroupedByDescriptionResponse.dto'
-import { ProductResponseDto } from '@hubla/api/dist/models/product/dto/ProductResponse.dto'
+import { ProductListGroupedByDescriptionResponseDto } from '@hubla/api/src/models/product/dto/ProductListGroupedByDescriptionResponse.dto'
+import { ProductResponseDto } from '@hubla/api/src/models/product/dto/ProductResponse.dto'
 
 const calcTotal = (list: ProductResponseDto[]): string => {
   let sum = 0

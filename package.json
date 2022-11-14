@@ -5,6 +5,7 @@
   "workspaces": ["app", "api"],
   "scripts": {
     "dev": "yarn workspace @hubla/api dev:watch & yarn workspace @hubla/app dev",
+    "build": "yarn workspace @hubla/api build & yarn workspace @hubla/app build",
     "test:api": "yarn workspace @hubla/api test",
     "test:api:watch": "yarn workspace @hubla/api test:watch",
     "test:app": "yarn workspace @hubla/app test",

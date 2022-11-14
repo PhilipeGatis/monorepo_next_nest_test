@@ -8,7 +8,7 @@ import TableContainer from '@mui/material/TableContainer'
 import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
-import { ProductListGroupedByDescriptionResponseDto } from '@hubla/api/dist/models/product/dto/ProductListGroupedByDescriptionResponse.dto'
+import { ProductListGroupedByDescriptionResponseDto } from '@hubla/api/src/models/product/dto/ProductListGroupedByDescriptionResponse.dto'
 import CollapsibleRow from '../molecules/CollapsibleRow'
 import UploadButton from '../molecules/UploadButton'
 
