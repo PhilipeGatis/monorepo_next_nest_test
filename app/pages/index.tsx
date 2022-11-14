@@ -5,7 +5,7 @@ import Layout from '../components/template/Layout'
 import DataGrid from '../components/organisms/DataGrid'
 import UploadButton from '../components/molecules/UploadButton'
 import { fetchProductList } from '../lib/api'
-import { ProductListGroupedByDescriptionResponseDto } from '@hubla/api/dist/models/product/dto/ProductListGroupedByDescriptionResponse.dto'
+import { ProductListGroupedByDescriptionResponseDto } from '@hubla/api/src/models/product/dto/ProductListGroupedByDescriptionResponse.dto'
 
 function HomePage() {
   const [list, setList] = useState<ProductListGroupedByDescriptionResponseDto[]>([])

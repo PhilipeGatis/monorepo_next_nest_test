@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UploadButton render 1`] = `
+<div>
+  <input
+    accept="text/plain"
+    id="contained-button-file"
+    style="display: none;"
+    type="file"
+  />
+  <label
+    for="contained-button-file"
+  >
+    <span
+      class="MuiButtonBase-root MuiButton-root MuiLoadingButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiLoadingButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1twrztz-MuiButtonBase-root-MuiButton-root-MuiLoadingButton-root"
+      id=":r0:"
+      role="button"
+      tabindex="0"
+    >
+      Upload
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </span>
+  </label>
+</div>
+`;
