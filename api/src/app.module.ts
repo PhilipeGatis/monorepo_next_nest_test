@@ -13,6 +13,7 @@ import databaseConfig from './database/config'
     }),
     ConfigModule.forRoot({
       isGlobal: true,
+      envFilePath: ['.env'],
       load: [databaseConfig],
     }),
     ProductsModule,

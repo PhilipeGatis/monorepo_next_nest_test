@@ -2,7 +2,7 @@ import axios from 'axios'
 import { ProductListGroupedByDescriptionResponseDto } from '@hubla/api/src/models/product/dto/ProductListGroupedByDescriptionResponse.dto'
 
 const request = axios.create({
-  baseURL: 'http://localhost:3001',
+  baseURL: process.env.NEXT_PUBLIC_BACKEND_URL,
 })
 
 export const fetchProductList = async (): Promise<ProductListGroupedByDescriptionResponseDto[]> => {
